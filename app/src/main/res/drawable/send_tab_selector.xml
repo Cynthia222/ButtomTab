@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 默认时的背景 -->
+    <item android:drawable="@drawable/send_tab_no" android:state_checked="false" />
+    <!-- 选择时的背景 -->
+    <item android:drawable="@drawable/send_tab" android:state_checked="true" />
+</selector>

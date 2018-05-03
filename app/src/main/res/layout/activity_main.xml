@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/content_frag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rg_tab"
+        android:background="@color/RGB_E6E9ED"></FrameLayout>
+
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/RGB_FFFFFF"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_3"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5"
+        android:weightSum="5">
+        <!--<LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">-->
+        <RadioButton
+            android:id="@+id/main_rb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableTop="@drawable/main_tab_selecter"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="首页"
+            android:textColor="@drawable/radio_selector_color"
+            android:textSize="@dimen/dp_12" />
+
+        <RadioButton
+            android:id="@+id/message_rb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableTop="@drawable/message_tab_selecter"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="消息"
+            android:textColor="@drawable/radio_selector_color"
+            android:textSize="@dimen/dp_12" />
+
+        <!--</LinearLayout>-->
+        <!--给中间凸起按钮预留位置-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"></LinearLayout>
+        <!--<LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">-->
+        <RadioButton
+            android:id="@+id/friend_rb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableTop="@drawable/friends_tab_selector"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="朋友圈"
+            android:textColor="@drawable/radio_selector_color"
+            android:textSize="@dimen/dp_12" />
+
+        <RadioButton
+            android:id="@+id/info_rb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableTop="@drawable/mine_tab_selecter"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="我的"
+            android:textColor="@drawable/radio_selector_color"
+            android:textSize="@dimen/dp_12" />
+        <!-- </LinearLayout>-->
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/send_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_100"
+        android:layout_above="@+id/rg_tab"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="3dp"
+        android:clickable="true"
+        android:onClick="signClick">
+
+        <ImageView
+            android:id="@+id/send_igv"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/send_tab_selector" />
+
+        <TextView
+            android:id="@+id/send_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="签到"
+            android:textColor="@drawable/radio_selector_color"
+            android:textSize="@dimen/dp_12" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
